@@ -1,0 +1,23 @@
+{
+    "name": "com.peartree.evtvariables",
+    "version": "1.0.0",
+    "displayName": "EvtVariables",
+    "description": "ScriptableObject Architecture Variables",
+    "unity": "2021.2",
+    "unityRelease": "2f1",
+    "documentationUrl": "https://github.com/peartreegames/evt-variables",
+    "changelogUrl": "https://github.com/peartreegames/evt-variables/changelog.html",
+    "licensesUrl": "https://github.com/peartreegames/evt-variables/licensing.html",
+    "dependencies": {
+   },
+   "keywords": [
+      "peartree",
+      "scriptableobjects"
+    ],
+    "author": {
+      "name": "bgk",
+      "email": "bgk@peartree.games",
+      "url": "https://peartree.games"
+    }
+  }
+  
