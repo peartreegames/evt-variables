@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 
-namespace EvtGraph
+namespace PeartreeGames.EvtVariables
 {
     [CreateAssetMenu(fileName = "bool_", menuName = "Evt/BoolObject", order = 0)]
-    public class EvtBoolObject : EvtObject<bool>
+    public class EvtBoolObject : EvtVariableObject<bool>
     {
-        [SerializeField] private EvtBoolVariable boolVariable;
-        protected override EvtVariable<bool> Variable => boolVariable;
     }
 }

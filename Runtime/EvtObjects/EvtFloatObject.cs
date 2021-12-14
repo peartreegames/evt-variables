@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 
-namespace EvtGraph
+namespace PeartreeGames.EvtVariables
 {
     [CreateAssetMenu(fileName = "float_", menuName = "Evt/FloatObject", order = 0)]
-    public class EvtFloatObject : EvtObject<float>
+    public class EvtFloatObject : EvtVariableObject<float>
     {
-        [SerializeField] private EvtFloatVariable floatVariable;
-        protected override EvtVariable<float> Variable => floatVariable;
+        protected override bool IsEqual(float current, float other) => Mathf.Abs(current - other) < Mathf.Epsilon;
     }
 }

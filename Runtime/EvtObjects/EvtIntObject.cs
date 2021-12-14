@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 
-namespace EvtGraph
+namespace PeartreeGames.EvtVariables
 {
     [CreateAssetMenu(fileName = "int_", menuName = "Evt/IntObject", order = 0)]
-    public class EvtIntObject : EvtObject<int>
+    public class EvtIntObject : EvtVariableObject<int>
     {
-        [SerializeField] private EvtIntVariable intVariable;
-        protected override EvtVariable<int> Variable => intVariable;
     }
 }

@@ -1,5 +1,5 @@
 {
-    "name": "com.peartree.evtvariables",
+    "name": "com.peartreegames.evtvariables",
     "version": "1.0.0",
     "displayName": "EvtVariables",
     "description": "ScriptableObject Architecture Variables",
@@ -9,8 +9,8 @@
     "changelogUrl": "https://github.com/peartreegames/evt-variables/changelog.html",
     "licensesUrl": "https://github.com/peartreegames/evt-variables/licensing.html",
     "dependencies": {
-   },
-   "keywords": [
+     },
+     "keywords": [
       "peartree",
       "scriptableobjects"
     ],

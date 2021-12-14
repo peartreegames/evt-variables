@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace EvtGraph
+namespace PeartreeGames.EvtVariables
 {
     [Serializable]
     public class EvtEvent
