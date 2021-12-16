@@ -9,7 +9,7 @@ namespace PeartreeGames.EvtVariables
     {
         [SerializeField] private T value;
         private readonly EvtEvent<T> _evt = new();
-
+        
         public virtual T Value
         {
             get => value;
