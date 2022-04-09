@@ -2,7 +2,7 @@
 
 namespace PeartreeGames.EvtVariables
 {
-    [CreateAssetMenu(fileName = "string_", menuName = "Evt/StringObject", order = 0)]
+    [CreateAssetMenu(fileName = "string_", menuName = "Evt/Variable/String", order = 0)]
     public class EvtStringObject : EvtVariableObject<string>
     {
     }

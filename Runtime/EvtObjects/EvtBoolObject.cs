@@ -2,7 +2,7 @@
 
 namespace PeartreeGames.EvtVariables
 {
-    [CreateAssetMenu(fileName = "bool_", menuName = "Evt/BoolObject", order = 0)]
+    [CreateAssetMenu(fileName = "bool_", menuName = "Evt/Variable/Bool", order = 0)]
     public class EvtBoolObject : EvtVariableObject<bool>
     {
     }

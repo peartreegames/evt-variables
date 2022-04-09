@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Linq;
+using UnityEngine;
 
 namespace PeartreeGames.EvtVariables
 {
     [Serializable]
     public class EvtEvent
     {
+        [HideInInspector]
         private Action _action = delegate {  };
         public void Invoke() => _action.Invoke();
         public void Subscribe(Action listener) => _action += listener;
@@ -16,6 +18,7 @@ namespace PeartreeGames.EvtVariables
     [Serializable]
     public class EvtEvent<T> : EvtEvent
     {
+        [HideInInspector]
         private Action<T> _actionT = delegate {  };
 
         public void Invoke(T param)

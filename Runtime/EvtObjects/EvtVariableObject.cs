@@ -7,7 +7,7 @@ namespace PeartreeGames.EvtVariables
 
     public abstract class EvtVariableObject<T> : EvtVariableObject, IEvtVariable<T>
     {
-        [SerializeField] private T value;
+        [SerializeField] protected T value;
         private readonly EvtEvent<T> _evt = new();
         
         public virtual T Value
