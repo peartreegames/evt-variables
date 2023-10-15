@@ -1,0 +1,14 @@
+﻿{
+  "name": "PeartreeGames.Evt.Variables",
+  "rootNamespace": "PeartreeGames.Evt.Variables",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

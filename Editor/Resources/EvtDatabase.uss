@@ -1,0 +1,66 @@
+﻿.auto-width {
+    width: auto
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.float-right {
+    right: 0;
+}
+
+.tab {
+    font-size: 16px;
+    padding: 5px 10px 5px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    background-color: #282828;
+}
+
+.tab-active {
+    -unity-font-style: bold;
+    background-color: #383838;
+    border-bottom-width: 0;
+}
+
+.tab-container {
+    height: 30px;
+    background-color: #282828;
+    border-bottom-width: 0;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.list-item {
+    margin: 2px 0;
+}
+
+.width-100 {
+    width: 100%;
+}
+.margin-5 {
+    margin: 5px;
+}
+
+.margin-5-10 {
+    margin: 5px 10px;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+.left {
+    padding-right: 5px;
+}

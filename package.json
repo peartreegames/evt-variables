@@ -1,23 +1,23 @@
 {
-    "name": "com.peartreegames.evtvariables",
-    "version": "0.1.1",
-    "displayName": "EvtVariables",
-    "description": "ScriptableObject Architecture Variables",
-    "unity": "2021.2",
-    "unityRelease": "2f1",
-    "documentationUrl": "https://github.com/peartreegames/evt-variables",
-    "changelogUrl": "https://github.com/peartreegames/evt-variables/changelog.html",
-    "licensesUrl": "https://github.com/peartreegames/evt-variables/licensing.html",
-    "dependencies": {
-     },
-     "keywords": [
-      "peartree",
-      "scriptableobjects"
-    ],
-    "author": {
-      "name": "Peartree Games",
-      "email": "bgk@peartree.games",
-      "url": "https://peartree.games"
-    }
+  "name": "com.peartreegames.evt.variables",
+  "version": "0.2.1",
+  "displayName": "Evt.Variables",
+  "description": "ScriptableObject Architecture Variables",
+  "unity": "2021.2",
+  "unityRelease": "2f1",
+  "documentationUrl": "https://github.com/peartreegames/evt-variables",
+  "changelogUrl": "https://github.com/peartreegames/evt-variables/changelog.html",
+  "licensesUrl": "https://github.com/peartreegames/evt-variables/licensing.html",
+  "dependencies": {
+  },
+  "keywords": [
+    "peartree",
+    "scriptableobjects"
+  ],
+  "author": {
+    "name": "Peartree Games",
+    "email": "bgk@peartree.games",
+    "url": "https://peartree.games"
   }
+}
   
