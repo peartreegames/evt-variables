@@ -4,8 +4,8 @@ using UnityEngine;
 namespace PeartreeGames.Evt.Variables
 {
     
-    [CreateAssetMenu(fileName = "evt_", menuName = "Evt/Object", order = 0)]
-    public class EvtObject : ScriptableObject
+    [CreateAssetMenu(fileName = "evt_", menuName = "Evt/Event", order = 0)]
+    public class EvtScriptableObject : ScriptableObject
     {
         private readonly EvtEvent _evt = new();
         

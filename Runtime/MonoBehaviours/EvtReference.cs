@@ -11,6 +11,7 @@ namespace PeartreeGames.Evt.Variables
 
         private void Awake()
         {
+            onEvent?.Invoke(variable.Value);
             variable.OnEvt += onEvent.Invoke;
         }
 
