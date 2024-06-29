@@ -1,6 +1,6 @@
 {
   "name": "com.peartreegames.evt.variables",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "displayName": "Evt.Variables",
   "description": "ScriptableObject Architecture Variables",
   "unity": "2021.2",

@@ -4,10 +4,16 @@ using UnityEngine;
 namespace PeartreeGames.Evt.Variables
 {
     public abstract class EvtVariable : ScriptableObject { }
-    public abstract class EvtVariable<T> : EvtVariable 
+    public abstract class EvtVariable<T> : EvtVariable
     {
+        [SerializeField] private T startValue;
         [SerializeField] private EvtVar<T> evtT;
-       
+        
+        private void OnEnable()
+        {
+            evtT.Value = startValue;
+        }
+
         public virtual T Value
         {
             get => evtT.Value;
