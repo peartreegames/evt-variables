@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace PeartreeGames.Evt.Variables
 {
-    [AddComponentMenu("Evt/EvtSprite")]
-    public class EvtSpriteReference : EvtReference<Sprite>
+    [AddComponentMenu("Evt/EvtSpriteReference")]
+    public class EvtSpriteReference : EvtVariableReference<Sprite>
     {
 
     }

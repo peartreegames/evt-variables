@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 namespace PeartreeGames.Evt.Variables
 {
-    [AddComponentMenu("Evt/EvtScene")]
-    public class EvtSceneReference : EvtReference<Scene>
+    [AddComponentMenu("Evt/EvtSceneReference")]
+    public class EvtSceneReference : EvtVariableReference<Scene>
     {
 
     }

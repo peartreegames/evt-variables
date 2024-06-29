@@ -4,7 +4,14 @@ using UnityEngine.Events;
 
 namespace PeartreeGames.Evt.Variables
 {
-    public abstract class EvtReference<T> : MonoBehaviour
+
+    public class EvtEventReference : MonoBehaviour
+    {
+        [SerializeField] private EvtEvent variable;
+        [SerializeField] private UnityEvent onEvent;
+    }
+    
+    public abstract class EvtVariableReference<T> : MonoBehaviour
     {
         [SerializeField] private EvtVariable<T> variable;
         [SerializeField] private UnityEvent<T> onEvent;

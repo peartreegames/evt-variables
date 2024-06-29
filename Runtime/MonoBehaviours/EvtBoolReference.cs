@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace PeartreeGames.Evt.Variables
 {
-    [AddComponentMenu("Evt/EvtBool")]
-    public class EvtBoolReference : EvtReference<bool>
+    [AddComponentMenu("Evt/EvtBoolReference")]
+    public class EvtBoolReference : EvtVariableReference<bool>
     {
 
     }
