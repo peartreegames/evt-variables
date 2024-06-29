@@ -12,12 +12,12 @@ namespace PeartreeGames.Evt.Variables
         private void Awake()
         {
             onEvent?.Invoke(variable.Value);
-            variable.OnEvt += onEvent.Invoke;
+            if (onEvent != null) variable.OnEvt += onEvent.Invoke;
         }
 
         private void OnDestroy()
         {
-            variable.OnEvt -= onEvent.Invoke;
+            if (onEvent != null) variable.OnEvt -= onEvent.Invoke;
         }
     }
 }
