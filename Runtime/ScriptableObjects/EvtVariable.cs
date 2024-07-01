@@ -14,6 +14,11 @@ namespace PeartreeGames.Evt.Variables
             if (evtT != null) evtT.Value = startValue;
         }
 
+        private void OnDisable()
+        {
+            if (evtT != null) evtT.Value = startValue;
+        }
+
         public virtual T Value
         {
             get => evtT.Value;
