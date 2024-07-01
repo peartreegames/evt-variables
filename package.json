@@ -1,5 +1,5 @@
 {
-  "name": "com.peartreegames.evt.variables",
+  "name": "games.peartree.evt.variables",
   "version": "0.3.4",
   "displayName": "Evt.Variables",
   "description": "ScriptableObject Architecture Variables",
