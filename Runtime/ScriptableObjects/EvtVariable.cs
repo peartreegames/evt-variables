@@ -21,10 +21,10 @@ namespace PeartreeGames.Evt.Variables
 
         public virtual T Value
         {
-            get => evtT?.Value ?? startValue;
+            get => evtT != null ? evtT.Value :  startValue;
             set
             {
-                if (evtT == null) return startValue;
+                if (evtT == null) return;
                 if (IsEqual(evtT.Value, value)) return;
                 evtT.Value = value;
             }
