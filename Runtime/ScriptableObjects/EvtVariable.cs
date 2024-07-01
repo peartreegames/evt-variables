@@ -3,22 +3,16 @@ using UnityEngine;
 
 namespace PeartreeGames.Evt.Variables
 {
-    public abstract class EvtVariable : ScriptableObject { }
+    public abstract class EvtVariable : ScriptableObject
+    {
+        public virtual void Reset() {}
+    }
+    
     public abstract class EvtVariable<T> : EvtVariable
     {
         [SerializeField] private T startValue;
         [SerializeField] private EvtVar<T> evtT;
         
-        private void OnEnable()
-        {
-            if (evtT != null) evtT.Value = startValue;
-        }
-
-        private void OnDisable()
-        {
-            if (evtT != null) evtT.Value = startValue;
-        }
-
         public virtual T Value
         {
             get => evtT != null ? evtT.Value :  startValue;
@@ -28,6 +22,11 @@ namespace PeartreeGames.Evt.Variables
                 if (IsEqual(evtT.Value, value)) return;
                 evtT.Value = value;
             }
+        }
+
+        public override void Reset()
+        {
+            evtT?.SetWithoutNotify(startValue);
         }
 
         protected EvtVar<T> EvtT => evtT;
