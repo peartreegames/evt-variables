@@ -9,13 +9,13 @@ namespace PeartreeGames.Evt.Variables.Editor
         [InitializeOnLoadMethod]
         private static void RegisterResets()
         {
-            EditorApplication.playModeStateChanged += PlayModeChanged; 
+            EditorApplication.playModeStateChanged += PlayModeChanged;
         }
 
         private static void PlayModeChanged(PlayModeStateChange playModeStateChange)
         {
-            if (playModeStateChange != PlayModeStateChange.ExitingPlayMode) return;
-            ResetVariables();
+            if (playModeStateChange is PlayModeStateChange.ExitingEditMode)
+                ResetVariables();
         }
 
         private static void ResetVariables()
@@ -23,7 +23,8 @@ namespace PeartreeGames.Evt.Variables.Editor
             var guids = AssetDatabase.FindAssets("t:EvtVariable");
             foreach (var guid in guids)
             {
-                var asset = AssetDatabase.LoadAssetAtPath<EvtVariable>(AssetDatabase.GUIDToAssetPath(guid));
+                var asset =
+                    AssetDatabase.LoadAssetAtPath<EvtVariable>(AssetDatabase.GUIDToAssetPath(guid));
                 if (asset != null) asset.Reset();
             }
         }

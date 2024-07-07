@@ -26,7 +26,7 @@ namespace PeartreeGames.Evt.Variables
 
         public override void Reset()
         {
-            evtT?.SetWithoutNotify(startValue);
+            evtT = new EvtVar<T>(startValue);
         }
 
         protected EvtVar<T> EvtT => evtT;
