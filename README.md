@@ -10,3 +10,9 @@ Can be installed via the Package Manager > Add Package From Git URL...
 These projects are fully fleshed out, tested, and all together better, so consider using them for production projects.
  - [Unity Atoms](https://github.com/unity-atoms/unity-atoms)
  - [ScriptableObject-Architecture](https://github.com/DanielEverland/ScriptableObject-Architecture)
+
+
+## Notes
+
+ScriptableObject Evts are used for Runtime References and Event Buses only. Not to manage
+data and state. Use MonoBehaviours to set default and update values.

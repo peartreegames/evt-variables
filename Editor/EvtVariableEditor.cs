@@ -10,21 +10,17 @@ namespace PeartreeGames.Evt.Variables.Editor
     public class EvtVariableEditor : UnityEditor.Editor
     {
         private SerializedProperty _evtTProperty;
-        private SerializedProperty _startProperty;
         private PropertyField _field;
 
         private void OnEnable()
         {
             _evtTProperty = serializedObject.FindProperty("evtT");
-            _startProperty = serializedObject.FindProperty("startValue");
         }
 
         public override VisualElement CreateInspectorGUI()
         {
             var elem = new VisualElement();
             elem.AddToClassList("flex-row");
-            var startField = new PropertyField(_startProperty);
-            elem.Add(startField);
             if (_evtTProperty != null)
             {
                 var value = _evtTProperty.FindPropertyRelative("value");
