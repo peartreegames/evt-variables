@@ -24,7 +24,7 @@ namespace PeartreeGames.Evt.Variables.Editor
             if (_evtTProperty != null)
             {
                 var value = _evtTProperty.FindPropertyRelative("value");
-                _field = new PropertyField(value);
+                _field = new PropertyField(value){ name = "value" };
                 _field.AddToClassList("flex-grow");
                 _field.Bind(serializedObject);
                 elem.Add(_field);

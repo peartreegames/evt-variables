@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ namespace PeartreeGames.Evt.Variables
 {
     
     [Serializable]
-    public class EvtList<T> : EvtEvent<List<T>>
+    public class EvtList<T> : EvtEvent<List<T>>, IEnumerable<T>
     {
         public EvtList() => value = new List<T>();
         public EvtList(List<T> startingValue) => value = startingValue;
@@ -15,21 +16,31 @@ namespace PeartreeGames.Evt.Variables
         public List<T> Value => value;
         public void Add(T item)
         {
-            Value.Add(item);
-            Invoke(Value);
+            value.Add(item);
+            Invoke(value);
         }
 
         public void Remove(T item)
         {
-            if (Value.Remove(item)) Invoke(Value);
+            if (value.Remove(item)) Invoke(value);
         }
 
         public void Clear()
         {
-            Value.Clear();
-            Invoke(Value);
+            value.Clear();
+            Invoke(value);
         }
 
         public bool Contains(T item) => Value.Contains(item);
+
+        public void Sort(Comparison<T> func)
+        {
+            value.Sort(func);
+            Invoke(value);
+        }
+
+        public IEnumerator<T> GetEnumerator() => value.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

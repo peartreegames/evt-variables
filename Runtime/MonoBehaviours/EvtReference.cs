@@ -16,13 +16,13 @@ namespace PeartreeGames.Evt.Variables
         [SerializeField] private EvtVariable<T> variable;
         [SerializeField] private UnityEvent<T> onEvent;
 
-        private void Awake()
+        private void OnEnable()
         {
             onEvent?.Invoke(variable.Value);
             if (onEvent != null) variable.OnEvt += onEvent.Invoke;
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             if (onEvent != null) variable.OnEvt -= onEvent.Invoke;
         }
