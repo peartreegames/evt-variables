@@ -9,6 +9,15 @@ namespace PeartreeGames.Evt.Variables
     {
         [SerializeField] private EvtEventObject variable;
         [SerializeField] private UnityEvent onEvent;
+        private void OnEnable()
+        {
+            if (onEvent != null) variable.OnEvt += onEvent.Invoke;
+        }
+
+        private void OnDisable()
+        {
+            if (onEvent != null) variable.OnEvt -= onEvent.Invoke;
+        }
     }
     
     public abstract class EvtVariableReference<T> : MonoBehaviour
