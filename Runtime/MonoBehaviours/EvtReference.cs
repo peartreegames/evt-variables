@@ -7,7 +7,7 @@ namespace PeartreeGames.Evt.Variables
 
     public class EvtEventReference : MonoBehaviour
     {
-        [SerializeField] private EvtEvent variable;
+        [SerializeField] private EvtEventObject variable;
         [SerializeField] private UnityEvent onEvent;
     }
     
