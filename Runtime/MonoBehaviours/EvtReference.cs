@@ -27,7 +27,7 @@ namespace PeartreeGames.Evt.Variables
 
         private void OnEnable()
         {
-            onEvent?.Invoke(variable.Value);
+            if (!variable.IsEventOnly) onEvent?.Invoke(variable.Value);
             if (onEvent != null) variable.OnEvt += onEvent.Invoke;
         }
 

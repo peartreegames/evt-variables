@@ -7,14 +7,21 @@ namespace PeartreeGames.Evt.Variables
     
     public abstract class EvtVariable<T> : EvtVariable
     {
+        [SerializeField] private bool isEventOnly;
         [SerializeField] private EvtVar<T> evtT;
         public EvtVar<T> EvtT => evtT;
+        public bool IsEventOnly => isEventOnly;
         
         public virtual T Value
         {
-            get => EvtT != null ? EvtT.Value : default;
+            get
+            {
+                if (isEventOnly) throw new NotSupportedException($"{name} is marked as EventOnly");
+                return EvtT != null ? EvtT.Value : default;
+            }
             set
             {
+                if (isEventOnly) throw new NotSupportedException($"{name} is marked as EventOnly");
                 if (IsEqual(EvtT.Value, value)) return;
                 EvtT.Value = value;
             }
