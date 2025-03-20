@@ -22,5 +22,7 @@ namespace PeartreeGames.Evt.Variables
                 Invoke(this.value);
             }
         }
+
+        public void SetWithoutNotify(T newValue) => value = newValue;
     }
 }
