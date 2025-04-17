@@ -3,7 +3,10 @@ using UnityEngine;
 
 namespace PeartreeGames.Evt.Variables
 {
-    public abstract class EvtVariable : ScriptableObject { }
+    public abstract class EvtVariable : ScriptableObject
+    {
+        public abstract void Reset();
+    }
     
     public abstract class EvtVariable<T> : EvtVariable
     {
@@ -36,5 +39,6 @@ namespace PeartreeGames.Evt.Variables
         }
 
         public void Invoke(T value) => EvtT.Invoke(value);
+        public override void Reset() => evtT?.SetWithoutNotify(default);
     }
 }
