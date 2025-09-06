@@ -24,10 +24,11 @@ namespace PeartreeGames.Evt.Variables
     {
         [SerializeField] private EvtVariable<T> variable;
         [SerializeField] private UnityEvent<T> onEvent;
+        [SerializeField] private bool triggerOnEnable;
 
         private void OnEnable()
         {
-            if (!variable.IsEventOnly) onEvent?.Invoke(variable.Value);
+            if (triggerOnEnable) onEvent?.Invoke(variable.Value);
             if (onEvent != null) variable.OnEvt += onEvent.Invoke;
         }
 
